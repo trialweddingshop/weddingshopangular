@@ -1,0 +1,55 @@
+.center {
+    display: flex;
+    justify-content: center;
+}
+.containerBox {
+    position: relative;
+    display: inline-block;
+    width: 24.5%;
+    margin-left: 5px;
+}
+.containerBox:hover{
+    border: 5px;
+    border-style: solid;
+    border-color: green;
+    width:23%;
+}
+.containerBox:active{
+    border: 5px;
+    border-style: solid;
+    border-color: yellow;
+}
+.text-box {
+    position: absolute;    
+    height: 100%;
+    text-align: center;    
+    width: 100%;
+}
+.text-box:before {
+   content: '';
+   display: inline-block;
+   height: 100%;
+   vertical-align: middle;
+}
+h4 {
+   display: inline-block;
+   font-size: 30px; /*or whatever you want*/
+   color: rgb(238, 255, 0);
+   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+html, body
+{
+ margin:0px;
+ height:100%;
+ width:100%;
+ background:url('../assets/images/bg.jpg') no-repeat center center fixed; 
+ -webkit-background-size:cover;
+ -o-background-size:cover;
+ -moz-background-size:cover;
+ background-size:cover;
+}

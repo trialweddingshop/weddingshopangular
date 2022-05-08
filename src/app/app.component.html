@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>{{title}}</title>
+  </head>
+  <body>
+    <div class="center">
+      <h1 *ngIf="authData.getLoggedInUser() == null"> Welcome to my wedding shop!</h1>
+      <h1 *ngIf="authData.getLoggedInUser() != null"> Welcome to my wedding shop, {{authData.getLoggedInUser()?.username}}</h1>
+    </div>
+    <div *ngIf="authData.getLoggedInUser() != null">
+      <button (click)="logout()">Log out!</button>
+    </div>
+    <div class="containerBox">
+      <nav>
+        <a routerLink="/auth">
+      <div class="text-box">
+          <h4>Register / Login</h4>
+      </div>
+      <img class="img-responsive" src="assets/images/flowery-bg.jpg"/>
+        </a>
+      </nav>
+  </div>
+  <div class="containerBox">
+    <nav>
+      <a routerLink="/browse">
+      <div class="text-box">
+          <h4>Browse</h4>
+      </div>
+    <img class="img-responsive" src="assets/images/flowery-bg.jpg"/>
+    </a>
+  </nav>
+  </div>
+  <div class="containerBox">
+    <nav>
+      <a routerLink="/orders">
+    <div class="text-box">
+        <h4>Orders</h4>
+    </div>
+    <img class="img-responsive" src="assets/images/flowery-bg.jpg"/>
+      </a>
+    </nav>
+  </div>
+  <div class="containerBox">
+    <nav>
+      <a routerLink="/items">
+    <div class="text-box">
+        <h4>Add / Remove items</h4>
+    </div>
+    <img class="img-responsive" src="assets/images/flowery-bg.jpg"/>
+    </a>
+    </nav>
+  </div>
+  </body>
+</html>
+<router-outlet></router-outlet>

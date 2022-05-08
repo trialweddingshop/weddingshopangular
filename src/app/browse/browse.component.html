@@ -1,0 +1,7 @@
+<div *ngFor="let item of itemList">
+    <h3>Name: {{item.name}}</h3>
+    <p>Description: {{item.description}}</p>
+    <p>Cost: {{item.cost}} $</p>
+    <img src={{item.image}}>
+    <button (click)="processOrder(item.itemId)">Order!</button>
+</div>
